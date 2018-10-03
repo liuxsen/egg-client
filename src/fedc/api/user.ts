@@ -7,8 +7,8 @@ class User extends BaseAPI {
   protected sRegisterUrl: string;
   constructor() {
     super();
-    this.sLoginUrl = '/login';
-    this.sRegisterUrl = '/register';
+    this.sLoginUrl = '/api/users/login';
+    this.sRegisterUrl = '/api/users/register';
   }
 
   public login(option: api.IRequestOption) {

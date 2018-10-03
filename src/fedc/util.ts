@@ -10,6 +10,7 @@ const fnPureFetchData = (option: any) => {
   return new Promise((resolve: any, reject: any) => {
     axios(option)
       .then((oRes: any) => {
+        console.log(oRes);
         if (!oRes.data) {
           oRes.data = {};
         }
@@ -27,6 +28,7 @@ const fnPureFetchData = (option: any) => {
       })
       .catch((err: any) => {
         console.log(err);
+        vm.$message.error('服务器错误');
       });
   });
 };
